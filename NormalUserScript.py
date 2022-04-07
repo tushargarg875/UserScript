@@ -10,6 +10,7 @@ f = open("AccessTokens", 'r')
 line = f.readline()
 
 Auth = "Bearer "+line
+print(Auth)
 
 
 def list_folder(token, path=""):
