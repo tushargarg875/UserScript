@@ -172,7 +172,7 @@ def find_file():
         if i < 50:
             print("Listing folder "+folder)
             r = list_folder(Auth, folder)
-            # print(r.text)
+            print(r.text)
             data = json.loads(r.text)
             size = len(data["entries"])
             idx = random.randint(0, size-1)
@@ -189,7 +189,7 @@ def find_file():
             print("Searching in "+folder)
             r = search(Auth)
             data = json.loads(r.text)
-            # print(r.text)
+            print(r.text)
             size = len(data["matches"])
             idx = random.randint(0, size-1)
             if(data["matches"][idx]["metadata"]["metadata"][".tag"] == "file"):
